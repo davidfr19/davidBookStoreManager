@@ -1,0 +1,31 @@
+<div>
+  <h1>Book Admin</h1>
+
+  <form action="">
+    <div class="form-group">
+      <label class="control-label" for="">Book Id</label>
+      <input [value] = 'bookId' (change)='onBookIdChange($event)' class="form-control" type="number">
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="">Book Name</label>
+      <input [value] = 'bookName' (change)='onBookNameChange($event)' class="form-control" type="text">
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="">Author</label>
+      <input [value] = 'author'(change)='onAuthorChange($event)'  class="form-control" type="text">
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="">Book Category</label>
+      <select name="" (change)='onBookCatChange($event)' id="">
+        <div *ngFor = 'let category of categories'>
+          <option value="category.getCategoryName()"></option>
+        </div>
+      </select>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="">Price</label>
+      <input [value] = 'price' (change)='onPriceChange($event)' class="form-control" type="number">
+    </div>
+    <button (click)="onDone()">Add</button>
+  </form>
+</div>

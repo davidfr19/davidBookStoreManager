@@ -1,0 +1,6 @@
+<div>
+  <h2>{{category.getCategoryName}}</h2>
+  <div *ngFor = 'let  book of category.getBook()'>
+    <app-book [book]='book'></app-book>
+  </div>
+</div>

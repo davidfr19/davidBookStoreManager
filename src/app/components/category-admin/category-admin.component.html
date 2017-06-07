@@ -1,0 +1,15 @@
+<div>
+  <h1>CategoryAdmin</h1>
+  <form action="">
+    <div class="form-group">
+      <label class="control-label" for="">Category Id</label>
+      <input [value] = 'categoryId' (change)='onCategoryIdChange($event)' class="form-control" type="number">
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="">Category Name</label>
+      <input [value] = 'categoryName' (change)='onCategoryNameChange($event)' class="form-control" type="text">
+    </div>
+    <button (click)="onDone()">Add</button>
+  </form>
+
+</div>
